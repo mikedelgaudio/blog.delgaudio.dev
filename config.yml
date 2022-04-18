@@ -1,0 +1,43 @@
+baseURL: https://blog.delgaudio.dev
+languageCode: en-us
+title: mike's blog
+theme: PaperMod
+copyright: Mike DelGaudio
+
+menu:
+  main:
+    - identifer: categories
+      name: Categories
+      url: /categories/
+      weight: 10
+    - identifer: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifer: archives
+      name: Archives
+      url: /archives/
+      weight: 30
+    - identifer: search
+      name: Search
+      url: /search/
+      weight: 40
+
+params:
+  homeInfoParams:
+    Title: Hi there wave
+    Content: Can be Info, links, about...
+
+  socialIcons: # optional
+    - name: "<platform>"
+      url: "<link>"
+    - name: "<platform 2>"
+      url: "<link2>"
+
+  ShowShareButtons: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
