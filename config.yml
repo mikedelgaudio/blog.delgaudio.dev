@@ -1,8 +1,9 @@
 baseURL: https://blog.delgaudio.dev
 languageCode: en-us
-title: mike's blog
+title: blog.delgaudio.dev
+author: Mike DelGaudio
 theme: PaperMod
-copyright: Mike DelGaudio
+copyright: "Mike DelGaudio"
 
 menu:
   main:
@@ -25,16 +26,24 @@ menu:
 
 params:
   homeInfoParams:
-    Title: Hi there wave
-    Content: Can be Info, links, about...
+    Title: mike's blog
+    Content: 👋 Hey all! This blog is where I share my findings along my journey across various technologies. I'll try to keep it interesting and teach you a couple new things.
 
   socialIcons: # optional
-    - name: "<platform>"
-      url: "<link>"
-    - name: "<platform 2>"
-      url: "<link2>"
+    - name: "github"
+      url: "https://github.com/mikedelgaudio"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/michael-delgaudio/"
+    - name: "twitter"
+      url: "https://twitter.com/delgaudiomike"
+    - name: "youtube"
+      url: "https://www.youtube.com/c/MikeDelGaudio"
 
-  ShowShareButtons: true
+  css: ["css/custom.css"]
+  disablecopy: true
+
+assets:
+  theme_color: "#161b23"
 
 outputs:
   home:
