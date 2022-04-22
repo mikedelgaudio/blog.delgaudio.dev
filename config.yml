@@ -1,6 +1,6 @@
 baseURL: https://blog.delgaudio.dev
 languageCode: en-us
-title: blog.delgaudio.dev
+title: mike's blog
 author: Mike DelGaudio
 theme: PaperMod
 copyright: "Mike DelGaudio"
@@ -29,7 +29,11 @@ params:
     Title: mike's blog
     Content: 👋 Hey all! This blog is where I share my findings along my journey across various technologies. I'll try to keep it interesting and teach you a couple new things.
 
-  socialIcons: # optional
+  assets:
+    theme_color: "#423"
+    favicon: "/favicon.png"
+
+  socialIcons:
     - name: "github"
       url: "https://github.com/mikedelgaudio"
     - name: "linkedin"
@@ -39,11 +43,8 @@ params:
     - name: "youtube"
       url: "https://www.youtube.com/c/MikeDelGaudio"
 
-  css: ["css/custom.css"]
-  disablecopy: true
-
-assets:
-  theme_color: "#161b23"
+  ShowCodeCopyButtons: true
+  ShowReadingTime: true
 
 outputs:
   home:
