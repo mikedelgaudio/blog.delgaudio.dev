@@ -38,10 +38,6 @@ params:
       url: "https://github.com/mikedelgaudio"
     - name: "linkedin"
       url: "https://www.linkedin.com/in/michael-delgaudio/"
-    - name: "twitter"
-      url: "https://twitter.com/delgaudiomike"
-    - name: "youtube"
-      url: "https://www.youtube.com/c/MikeDelGaudio"
 
   ShowCodeCopyButtons: true
   ShowReadingTime: true
