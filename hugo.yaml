@@ -56,6 +56,16 @@ outputs:
 params:
   author: Mike DelGaudio
 
+  # Used for the homepage's <meta name="description"> and og:description
+  # — pages/posts override this with their own description or summary.
+  description: "Notes on shipping software — macOS, CSS, web development, and the occasional pixel-art robot. Written by Mike DelGaudio."
+
+  # Site-wide og:image / Twitter card fallback for pages without their
+  # own cover image (home, About, Archives, Search). Individual posts
+  # keep using their own cover.image instead of this.
+  images:
+    - "/images/social/og-default.png"
+
   label:
     text: "blog.delgaudio.dev"
     icon: "images/logo.jpg"
