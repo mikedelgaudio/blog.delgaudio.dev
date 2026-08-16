@@ -4,6 +4,9 @@ date: 2026-08-02T15:31:42-07:00
 draft: false
 tags: ["typescript", "css", "layout", "architecture"]
 categories: "web development"
+cover:
+  image: "/images/covers/responsive-conductor-vs-pretext.svg"
+  alt: "Diagram of a header bar dropping lower-priority controls as it narrows"
 ---
 
 Back in 2024 I built a small library called **ResponsiveConductor** to solve a layout problem CSS has no vocabulary for. I recently revisited it, and this post is about the shape of that design: what the problem actually is, what architecture it pushes you toward, and how that compares to another project that arrived later from a similar starting complaint.

@@ -4,6 +4,9 @@ date: 2026-05-27T22:00:00-04:00
 draft: false
 tags: ["swift", "macos", "github-copilot", "pixel-art", "side-project"]
 categories: "projects"
+cover:
+  image: "/images/covers/building-dockbuddies.jpg"
+  alt: "DockBuddies pixel-art dock robots demo"
 ---
 
 I've been spending a lot of time lately with [GitHub Copilot CLI](https://githubnext.com/projects/copilot-cli) — spinning up agents to help me write code, run tests, explore repos, the usual. One thing that kept bugging me was that I'd have three or four sessions going across different terminal tabs and completely lose track of what each one was doing. Is that agent still editing files? Did my test run finish? Which tab was working on the auth module again?

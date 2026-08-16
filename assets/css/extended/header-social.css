@@ -1,0 +1,186 @@
+/* On desktop, the #nav-links wrapper shouldn't form its own flex box —
+   its children (menu, social icons) need to stay direct flex items of
+   .header-nav. */
+.nav-links {
+    display: contents;
+}
+
+/* Logo + menu grouped tightly on the left, icons pinned to the far
+   right, instead of the theme's default evenly-spread space-between.
+
+   align-items: center is the key fix here — the theme leaves .header-nav
+   at its default (stretch), so every flex child (menu links, icon
+   buttons) stretches to the full header height. That's why hover states
+   were reading as a full-height bar / an elongated oval instead of a
+   tight pill/circle around the content. */
+.header-nav {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4px 0;
+}
+
+/* Scale the brand mark down — the theme's 24px bold default plus our
+   logo image read as oversized next to a 14px nav; this is closer to
+   Omar's understated wordmark. */
+.logo a {
+    font-size: 17px;
+    gap: 0.4rem;
+}
+
+.header-nav .menu {
+    align-items: center;
+    margin-inline-start: 12px;
+    gap: 2px;
+}
+
+.menu li + li {
+    margin-inline-start: 0 !important;
+}
+
+/* Roomier click targets with a real hover affordance, sized to wrap the
+   text (not the header row) — Omar's nav uses 14px text in tight,
+   evenly-padded pills. */
+.menu a {
+    display: inline-flex;
+    align-items: center;
+    line-height: normal;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--secondary);
+    border-radius: var(--radius);
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.menu a:hover {
+    background: var(--tertiary);
+    color: var(--primary);
+}
+
+.menu .active {
+    color: var(--primary);
+    font-weight: 700;
+    border-bottom: none;
+}
+
+/* GitHub/LinkedIn icon buttons in the header nav, alongside the menu */
+.header-nav .social-icons {
+    display: flex;
+    align-items: center;
+    margin: 0 var(--gap) 0 auto;
+    gap: 0.2rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 50%;
+    color: var(--secondary);
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.social-icons a svg {
+    height: 20px;
+    width: 20px;
+}
+
+.social-icons a:hover {
+    background: var(--tertiary);
+    color: var(--primary);
+}
+
+/* Theme toggle now lives with the other right-side icons instead of next
+   to the logo. On desktop it just trails the social icons (which already
+   carry the margin-left: auto that pushes the whole trailing group
+   right); on mobile, nav-links is hidden so this becomes the first
+   trailing item and needs the auto margin itself — see the media query
+   below. Only one element at a time should carry margin-left: auto, or
+   flexbox splits the leftover space into multiple gaps instead of one
+   clean push. */
+.logo-switches {
+    margin: 0 0.4rem;
+}
+
+/* Hamburger toggle: hidden on desktop, shown only below the mobile breakpoint */
+.nav-toggle {
+    display: none;
+    align-items: center;
+    background: none;
+    border: none;
+    color: var(--primary);
+    cursor: pointer;
+    margin: 0 var(--gap) 0 0.4rem;
+    padding: 6px;
+}
+
+.nav-toggle .nav-toggle-close {
+    display: none;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-open {
+    display: none;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-close {
+    display: block;
+}
+
+@media screen and (max-width: 700px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .header-nav {
+        position: relative;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--theme);
+        border-bottom: 1px solid var(--border);
+        padding: 10px var(--gap);
+        z-index: 20;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        overflow: visible;
+        white-space: normal;
+        width: 100%;
+        gap: 2px;
+    }
+
+    .nav-links .menu a {
+        width: 100%;
+        padding: 8px 10px;
+    }
+
+    .nav-links .menu li {
+        margin-inline-start: 0 !important;
+    }
+
+    .nav-links .social-icons {
+        margin: 0;
+    }
+
+    /* nav-links (menu + social icons) is hidden on mobile, so the theme
+       toggle becomes the first trailing item after the logo — it needs
+       to be the one soaking up the leftover space now. */
+    .logo-switches {
+        margin: 0 0.4rem 0 auto;
+    }
+}

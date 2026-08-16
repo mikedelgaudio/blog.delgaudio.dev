@@ -11,6 +11,11 @@ module:
 # SEO basics
 enableRobotsTXT: true
 
+# No categories/tags listing pages
+disableKinds:
+  - taxonomy
+  - term
+
 sitemap:
   changefreq: weekly
   priority: 0.5
@@ -29,14 +34,10 @@ minify:
 
 menu:
   main:
-    - identifier: categories
-      name: Categories
-      url: /categories/
-      weight: 10
-    - identifier: tags
-      name: Tags
-      url: /tags/
-      weight: 20
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 5
     - identifier: archives
       name: Archives
       url: /archives/
@@ -55,9 +56,10 @@ outputs:
 params:
   author: Mike DelGaudio
 
-  homeInfoParams:
-    Title: mike's blog
-    Content: 👋 Hey all! This blog is where I share my findings along my journey across various technologies. I'll try to keep it interesting and teach you a couple new things.
+  label:
+    text: "blog.delgaudio.dev"
+    icon: "images/logo.jpg"
+    iconHeight: 26
 
   assets:
     theme_color: "#423"

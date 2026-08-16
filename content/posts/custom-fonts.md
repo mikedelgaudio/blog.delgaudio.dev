@@ -4,6 +4,10 @@ date: 2021-07-18T20:34:10-04:00
 draft: false
 tags: ["css", "html", "fonts", "easy"]
 categories: "web development"
+cover:
+  image: "/images/covers/custom-fonts.jpg"
+  alt: "Wood letterpress type"
+  caption: "Photo: [Michellecornelison](https://commons.wikimedia.org/wiki/File:Wood_letterpress_type.jpg) / Wikimedia Commons, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)"
 ---
 
 Today, many developers utilize numerous fonts from all over the web to deliver a unique user interface for their clients. For example, developers use Google Fonts, a free, open-source library of fonts available for personal and commercial use. However, custom fonts and large icon libraries provide a potential performance degradation and slower first-paint time.

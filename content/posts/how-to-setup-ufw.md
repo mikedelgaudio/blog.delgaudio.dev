@@ -4,6 +4,10 @@ date: 2021-04-08T20:34:10-04:00
 draft: false
 tags: ["raspberry-pi", "linux", "easy"]
 categories: "networking"
+cover:
+  image: "/images/covers/how-to-setup-ufw.jpg"
+  alt: "Raspberry Pi 4 Model B board"
+  caption: "Photo: [Laserlicht](https://commons.wikimedia.org/wiki/File:Raspberry_Pi_4_Model_B_-_Top.jpg) / Wikimedia Commons, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)"
 ---
 
 This tutorial demonstrates how to configure a Raspberry Pi with UFW protection. UFW (Uncomplicated Firewall) is a program to manage simple network firewall rules in numerous Linux distros. Many users utilize UFW to block or allow specific transfer protocols or IP addresses in their Linux environment.
